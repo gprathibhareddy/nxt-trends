@@ -35,6 +35,8 @@ class LoginForm extends Component {
 
   submitForm = async event => {
     event.preventDefault()
+    const fakeToken = 'mock_jwt_token_123456'
+    this.onSubmitSuccess(fakeToken)
     const {username, password} = this.state
     const userDetails = {username, password}
     const url = 'https://apis.ccbp.in/login'
